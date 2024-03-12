@@ -1,8 +1,8 @@
 export default function sum(...numbers) {
-  return numbers.reduce((a, b) => a + b + 0)
+  return numbers.reduce((a, b) => a + b + 0);
 }
-if (import.meta.vitest){
-  const {test,expect, describe} = import.meta.vitest;
+if (import.meta.vitest) {
+  const { test, expect, describe } = import.meta.vitest;
   describe("group #2", () => {
     test("sum of any numbers", () => {
       expect(sum(1, 2, 3)).toEqual(6);
