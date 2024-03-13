@@ -9,6 +9,11 @@ test("header test #1", () => {
 
 test("header test #2", () => {
   render(<Header title="title header" />);
-  const h1Element = screen.getByRole("heading");
+  const h1Element = screen.getByRole("heading", { name: /title/i });
   expect(h1Element).toBeInTheDocument();
+});
+
+test("header test #3", () => {
+  render(<Header title="title header" />);
+  expect(screen.getByTitle("header")).toBeInTheDocument();
 });
