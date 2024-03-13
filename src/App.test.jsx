@@ -6,6 +6,6 @@ describe("App", () => {
   test("testing App", () => {
     render(<App />);
     // screen.debug(); // prints out the jsx in the App component unto the command line
-    expect(screen.findAllByText(/React/i)).toBeInTheDocument();
+    expect(screen.getByText(/count/i)).toBeInTheDocument();
   });
 });
