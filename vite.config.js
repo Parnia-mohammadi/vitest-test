@@ -5,6 +5,9 @@ import react from "@vitejs/plugin-react";
 export default defineConfig({
   plugins: [react()],
   test: {
+    globals: true,
+    setupFiles: './tests/setup.js', // assuming the test folder is in the root of our project
+    environment: "jsdom",
     includeSource: ["src/**/*.{js,ts}"],
     coverage: {
       provider: "v8",
