@@ -32,3 +32,8 @@ test("header test #6", () => {
   render(<Header title="title header" />);
   expect(screen.queryByText(/vuejs/i)).not.toBeInTheDocument();
 });
+
+test("header test #7", () => {
+  render(<Header title="title header" />);
+  expect(screen.getAllByRole("heading", { level: 2 }).length).toBe(1);
+});
