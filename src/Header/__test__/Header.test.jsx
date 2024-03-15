@@ -20,7 +20,7 @@ test("header test #3", () => {
 
 test("header test #4", async () => {
   render(<Header title="title header" />);
-  expect(await screen.findByText(/2/i)).toBeInTheDocument();
+  expect(await screen.findByText("title header")).toBeInTheDocument();
 });
 
 test("header test #5", () => {
@@ -36,4 +36,11 @@ test("header test #6", () => {
 test("header test #7", () => {
   render(<Header title="title header" />);
   expect(screen.getAllByRole("heading", { level: 2 }).length).toBe(1);
+});
+
+test("header test #8", () => {
+  render(<Header title="title header" />);
+  expect(screen.getAllByRole("spinbutton", { value: { now: 3 } }).length).toBe(
+    1
+  );
 });
