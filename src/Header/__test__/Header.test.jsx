@@ -17,3 +17,8 @@ test("header test #3", () => {
   render(<Header title="title header" />);
   expect(screen.getByTitle("header")).toBeInTheDocument();
 });
+
+test("header test #4", async () => {
+  render(<Header title="title header" />);
+  expect(await screen.findByText(/2/i)).toBeInTheDocument();
+});
