@@ -27,3 +27,8 @@ test("header test #5", () => {
   render(<Header title="title header" />);
   expect(screen.getByTestId("header-2")).toBeInTheDocument();
 });
+
+test("header test #6", () => {
+  render(<Header title="title header" />);
+  expect(screen.queryByText(/vuejs/i)).not.toBeInTheDocument();
+});
