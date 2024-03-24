@@ -16,3 +16,12 @@ test("should be able to type in input #2", () => {
   fireEvent.change(inputEl, { target: { value: "coding" } });
   expect(inputEl.value).toBe("coding");
 });
+test("should have empty input after button clicked #3", () => {
+  render(<AddTodo setTodos={mockedSetTodos} todos={[]} />);
+  const inputEl = screen.getByLabelText("todo");
+  fireEvent.click(inputEl);
+  fireEvent.change(inputEl, { target: { value: "coding" } });
+  const button = screen.getByRole("button");
+  fireEvent.click(button);
+  expect(inputEl.value).toBe("");
+});
