@@ -34,3 +34,12 @@ test("testing setTodos is called after button's clicked #4", () => {
   fireEvent.click(button);
   expect(mockedSetTodos).toBeCalled();
 });
+test("test #5",()=>{
+  render(<AddTodo setTodos={mockedSetTodos} todos={[]} />);
+  const inputEl = screen.getByLabelText("todo");
+  fireEvent.click(inputEl);
+  fireEvent.change(inputEl, { target: { value: "coding" } });
+  const button = screen.getByRole("button");
+  fireEvent.click(button);
+  expect(inputEl.value).toBe("coding");
+})
