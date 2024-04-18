@@ -5,6 +5,7 @@ import "./App.css";
 import sum from "./sum";
 import Header from "./Header/Header";
 import Users from "./Users/Users";
+import Button from "./ui/Button";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -34,6 +35,8 @@ function App() {
         Click on the Vite and React logos to learn more
       </p>
       <Users />
+      <Button>pink button</Button>
+      <Button varient="primary">primary button</Button>
     </>
   );
 }
