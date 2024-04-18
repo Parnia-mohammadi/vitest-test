@@ -6,6 +6,7 @@ import sum from "./sum";
 import Header from "./Header/Header";
 import Users from "./Users/Users";
 import Button from "./ui/Button";
+import TomatoButton from "./ui/TomatoButton";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -37,6 +38,7 @@ function App() {
       <Users />
       <Button>pink button</Button>
       <Button varient="primary">primary button</Button>
+      <TomatoButton>Tomato Button</TomatoButton>
     </>
   );
 }
