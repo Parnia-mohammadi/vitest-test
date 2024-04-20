@@ -7,6 +7,7 @@ import Header from "./Header/Header";
 import Users from "./Users/Users";
 import Button from "./ui/Button";
 import TomatoButton from "./ui/TomatoButton";
+import Heading from "./ui/Heading";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -39,6 +40,10 @@ function App() {
       <Button>pink button</Button>
       <Button varient="primary">primary button</Button>
       <TomatoButton>Tomato Button</TomatoButton>
+      <Heading>this is h1</Heading>
+      <Heading as="h2">this is h2</Heading>
+      <Heading as="h3">this is h3</Heading>
+      <Heading as="h4">this is h4</Heading>
     </>
   );
 }
